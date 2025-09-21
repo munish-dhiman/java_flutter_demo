@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "dhiman.edu";
+option java_outer_classname = "HelloGrpcProto";
+
+package hello;
+
+service HelloGrpc {
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+service SumService{
+  rpc Sum(SumRequest) returns (SumResponse){}
+}
+
+message HelloRequest {
+  optional string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}
+
+message SumRequest {
+  int64 arg_one = 1;
+  int64 arg_two = 2;
+}
+
+message SumResponse {
+  int64 result = 1;
+}

@@ -1,0 +1,37 @@
+name: android_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.2.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_dotenv: ^5.0.2
+  cupertino_icons: ^1.0.8
+  grpc: ^4.1.0
+  protobuf: ^4.2.0
+  logging: ^1.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  lints: ^6.0.0
+
+  #  Build System
+  build_runner: ^2.4.8
+  protoc_plugin: ^22.5.0
+
+flutter:
+  uses-material-design: true
+
+  # Declare your .env files as assets so they can be loaded at runtime.
+  assets:
+    - .env.dev
+    - .env.staging
+    - .env.prod
+
+executables:
+  proto_generate:

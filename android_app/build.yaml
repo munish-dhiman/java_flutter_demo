@@ -1,0 +1,7 @@
+targets:
+  $default:
+    builders:
+      protoc_plugin:
+        options:
+          proto_root: protos
+          dart_out: lib/src/generated
